@@ -18,7 +18,7 @@ public class OrderFormContrller
 	OrderFormServiceImpl orderFormServiceImpl;
 	
 	@ResponseBody
-	@RequestMapping("/perm/addOrderForm")
+	@RequestMapping("/addOrderForm.perm")
 	ResultBean addOrderForm(String name, String des, Integer mainUserId, 
 			String srcDir, String status, Integer orderUserId) 
 	{

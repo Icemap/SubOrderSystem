@@ -38,6 +38,10 @@ public class PermissionsFilter implements Filter
 		Boolean isLogin = false;
 		HttpServletRequest hrequest = (HttpServletRequest) request;
 		HttpServletResponse hresponse = (HttpServletResponse) response;
+		
+		String uri = hrequest.getRequestURI();
+		if(!uri.contains(".perm")) chain.doFilter(request, response);
+		
 		Cookie[] cookies = hrequest.getCookies();
 		for(Cookie cookie : cookies)
 		{
